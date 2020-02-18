@@ -3,17 +3,28 @@ package Unit2.Task2;
 public class Accessory {
     private int count;
     private double cost;
+    private String name;
 
-    public Accessory(int count, double cost) {
+    public Accessory(int count, double cost, String name) {
         this.count = count;
         this.cost = cost;
+        this.name = name;
     }
 
-    public void addCount(int count) {
-        this.count += count;
+    @Override
+    public String toString() {
+        return name + " : " + cost + " : " + count;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public double getCost() {
-        return cost*count;
+        return cost;
+    }
+
+    public int getCount() {
+        return count;
     }
 }
