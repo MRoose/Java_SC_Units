@@ -6,15 +6,13 @@ import java.util.List;
 public class Subject<T> {
     private Subjects subject;
     private List<T> assessments = new ArrayList<>();
-    Student student;
 
-    public Subject(Subjects subject, String studentName) {
+    public Subject(Subjects subject) {
         this.subject = subject;
-        student = new Student(studentName);
     }
 
-    public Subject(Subjects subject, String studentName, List<T> assessments) {
-        this(subject, studentName);
+    public Subject(Subjects subject, List<T> assessments) {
+        this(subject);
         setAssessments(assessments);
     }
 
@@ -25,10 +23,4 @@ public class Subject<T> {
     public void addAssessments(T ass) {
         assessments.add(ass);
     }
-}
-
-enum Subjects {
-    Math,
-    Informatics,
-    History
 }
