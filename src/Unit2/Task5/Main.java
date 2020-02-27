@@ -9,36 +9,43 @@ public class Main {
     public static void main(String[] args) {
 
         Student st1 = new Student("Рузвельт Мира");
-        Student st2 = new Student("Пупкин Василий");
-        Student st3 = new Student("Федеров Андрей");
-        Student st4 = new Student("Комаров Алексей");
-        Student st5 = new Student("Пушкин Александр");
-        Student st6 = new Student("Абрамович Антон");
-        Student st7 = new Student("Игнатьев Евгений");
-        Student st8 = new Student("Миронов Владимир");
-        Student st9 = new Student("Попов Геннадий");
-
         List<Integer> assListInt1 = new ArrayList<>();
-        List<Integer> assListInt2 = new ArrayList<>();
-        List<Integer> assListInt3 = new ArrayList<>();
-        List<Integer> assListInt4 = new ArrayList<>();
-        List<Integer> assListInt5 = new ArrayList<>();
-        List<Integer> assListInt6 = new ArrayList<>();
-        List<Integer> assListInt7 = new ArrayList<>();
-        List<Integer> assListInt8 = new ArrayList<>();
-        List<Integer> assListInt9 = new ArrayList<>();
-
         List<Double> assListDouble1 = new ArrayList<>();
+
+        Student st2 = new Student("Пупкин Василий");
+        List<Integer> assListInt2 = new ArrayList<>();
         List<Double> assListDouble2 = new ArrayList<>();
+
+        Student st3 = new Student("Федеров Андрей");
+        List<Integer> assListInt3 = new ArrayList<>();
         List<Double> assListDouble3 = new ArrayList<>();
+
+        Student st4 = new Student("Комаров Алексей");
+        List<Integer> assListInt4 = new ArrayList<>();
         List<Double> assListDouble4 = new ArrayList<>();
+
+        Student st5 = new Student("Пушкин Александр");
+        List<Integer> assListInt5 = new ArrayList<>();
         List<Double> assListDouble5 = new ArrayList<>();
+
+        Student st6 = new Student("Абрамович Антон");
+        List<Integer> assListInt6 = new ArrayList<>();
         List<Double> assListDouble6 = new ArrayList<>();
+
+        Student st7 = new Student("Игнатьев Евгений");
+        List<Integer> assListInt7 = new ArrayList<>();
         List<Double> assListDouble7 = new ArrayList<>();
+
+        Student st8 = new Student("Миронов Владимир");
+        List<Integer> assListInt8 = new ArrayList<>();
         List<Double> assListDouble8 = new ArrayList<>();
+
+        Student st9 = new Student("Попов Геннадий");
+        List<Integer> assListInt9 = new ArrayList<>();
         List<Double> assListDouble9 = new ArrayList<>();
 
-        for (int i=0; i<10; i++) {
+        //заполняем списки с оценками
+        for (int i = 0; i < 10; i++) {
             Random rnd = new Random();
             int tempInt = 2 + rnd.nextInt(6);
             double tempDouble = 2.0 + (5.0 - 2.0) * rnd.nextDouble();
@@ -64,6 +71,7 @@ public class Main {
             assListDouble9.add(tempDouble);
         }
 
+        //создаем список всех студентов
         List<Subject> students = new ArrayList<>();
 
         students.add(new Subject<Integer>("Алгебра", st1, assListInt1));
@@ -90,6 +98,11 @@ public class Main {
     }
 
     public static void searcher(List<Subject> list, String name) {
-
+        for (Subject s : list) {
+            if (s.getStudent().getName() == name) {
+                System.out.println(s.getSubject());
+                System.out.println(s.getAssessments().toString());
+            }
+        }
     }
 }

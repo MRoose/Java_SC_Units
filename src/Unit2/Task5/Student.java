@@ -1,8 +1,5 @@
 package Unit2.Task5;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Student {
     private String name;
 

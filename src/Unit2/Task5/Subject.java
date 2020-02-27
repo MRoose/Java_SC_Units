@@ -17,4 +17,16 @@ public class Subject<T> {
     public void setAssessments(List<T> assessments) {
         this.assessments = assessments;
     }
+
+    public List<T> getAssessments() {
+        return assessments;
+    }
+
+    public Student getStudent() {
+        return student;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
 }

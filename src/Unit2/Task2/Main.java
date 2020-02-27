@@ -19,7 +19,7 @@ public class Main {
         System.out.println(getSummaryList(list));
     }
 
-    private static double getSummaryArgs(Accessory ... obj) {
+    private static double getSummaryArgs(Accessory... obj) {
         double summary = 0;
 
         for (Accessory a : obj) {

@@ -42,6 +42,6 @@ public class Pen {
 
     @Override
     public String toString() {
-        return "Pen=type:"+type+";cost:"+cost;
+        return "Pen=type:" + type + ";cost:" + cost;
     }
 }
