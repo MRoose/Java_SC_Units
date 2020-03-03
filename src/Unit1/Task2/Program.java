@@ -2,15 +2,14 @@ package Unit1.Task2;
 
 public class Program {
     public static void main(String[] args) {
-        //ArrayWork.cycle1(ArrayWork.getNumbList(200));
-        //ArrayWork.cycle2(ArrayWork.getNumbList(200));
-        ArrayWork.cycle3(ArrayWork.getNumbList(200));
+        int arr[] = getArrayWithNumbers(200);
+
+        output(SomeCycles.cycle1(arr));
+        output(SomeCycles.cycle2(arr));
+        output(SomeCycles.cycle3(arr));
     }
-}
 
-class ArrayWork {
-
-    public static int[] getNumbList(int maxValue) {
+    public static int[] getArrayWithNumbers(int maxValue) {
         int[] arr = new int[maxValue / 2];
 
         for (int i = 0, j = 2; i < arr.length; i++, j += 2) {
@@ -19,18 +18,30 @@ class ArrayWork {
         return arr;
     }
 
+    public static void output(int numbers[]) {
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.print(numbers[i]);
 
-    public static void cycle1(int numbers[]) {
+            if(i != numbers.length-1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
+    }
+}
+
+class SomeCycles {
+    public static int[] cycle1(int numbers[]) {
         int[] temp = new int[numbers.length / 2];
 
         for (int i = 0, j = 0; i < temp.length; i++, j += 2) {
             temp[i] = numbers[j] * numbers[j + 1];
         }
 
-        output(temp);
+        return temp;
     }
 
-    public static void cycle2(int numbers[]) {
+    public static int[] cycle2(int numbers[]) {
         int[] temp = new int[numbers.length / 2];
 
         int i = 0, j = 0;
@@ -40,10 +51,10 @@ class ArrayWork {
             j += 2;
         } while (i < temp.length);
 
-        output(temp);
+        return temp;
     }
 
-    public static void cycle3(int numbers[]) {
+    public static int[] cycle3(int numbers[]) {
         int[] temp = new int[numbers.length / 2];
 
         int i = 0, j = 0;
@@ -53,14 +64,7 @@ class ArrayWork {
             j += 2;
         }
 
-        output(temp);
-    }
-
-    public static void output(int numbers[]) {
-
-        for (int i = 0; i < numbers.length; i++) {
-            System.out.println(numbers[i]);
-        }
+        return temp;
     }
 }
 
