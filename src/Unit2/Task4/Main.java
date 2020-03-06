@@ -15,25 +15,25 @@ public class Main {
         List<Accessory> listAcc = new StarterPack().getStPack();
 
         System.out.println("Без сортировки :");
-        for(Accessory a : listAcc) {
+        for (Accessory a : listAcc) {
             System.out.println(a.toString());
         }
 
         System.out.println("Сортировка по имени :");
         listAcc.sort(accessoryNameComparator);
-        for(Accessory a : listAcc) {
+        for (Accessory a : listAcc) {
             System.out.println(a.toString());
         }
 
         System.out.println("Сортировка по цене :");
         listAcc.sort(accessoryCostComparator);
-        for(Accessory a : listAcc) {
+        for (Accessory a : listAcc) {
             System.out.println(a.toString());
         }
 
         System.out.println("Сортировка по имени, затем цене :");
         listAcc.sort(accessoryDoubleComparator);
-        for(Accessory a : listAcc) {
+        for (Accessory a : listAcc) {
             System.out.println(a.toString());
         }
     }
