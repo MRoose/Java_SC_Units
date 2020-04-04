@@ -5,11 +5,11 @@ import Unit2.Task2.Accessory;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StarterPack extends Accessory {
+public class StarterPack {
     private List<Accessory> stPack = new ArrayList<>();
 
-    public StarterPack(int count1, double cost1, String name1) {
-
+    public StarterPack() {
+        
         stPack.add(new Accessory(5, 11.99, "Ручка"));
         stPack.add(new Accessory(2, 5, "Карандаш"));
         stPack.add(new Accessory(1, 2.5, "Ластик"));
