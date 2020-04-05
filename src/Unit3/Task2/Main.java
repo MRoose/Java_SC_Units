@@ -1,4 +1,4 @@
-package Task2;
+package Unit3.Task2;
 
 import java.util.Locale;
 import java.util.ResourceBundle;
@@ -12,8 +12,8 @@ public class Main {
     }
 
     private static String getQA(Locale locale, Integer number) {
-        ResourceBundle rbQuestions = ResourceBundle.getBundle("Task2.Questions", locale);
-        ResourceBundle rbAnswers = ResourceBundle.getBundle("Task2.Answers", locale);
+        ResourceBundle rbQuestions = ResourceBundle.getBundle("Unit3.Task2.Questions", locale);
+        ResourceBundle rbAnswers = ResourceBundle.getBundle("Unit3.Task2.Answers", locale);
         return rbQuestions.getString("q"+number.toString()) + " - " + rbAnswers.getObject("a"+number.toString()).toString();
     }
 }
